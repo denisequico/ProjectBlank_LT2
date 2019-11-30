@@ -1,0 +1,36 @@
+<html>
+    <header>
+        <style>
+        footer {
+        font-family: Open Sans;
+        font-style: normal;
+        font-size: 12px;
+        bottom: 5px;
+        width: 100%;
+        }
+        table {
+            table-layout: fixed ;
+            width: 100% ;
+        }
+        td {
+            width: 25% ;
+        }
+    </style>
+        {% include "header.html" %}
+    </header>
+    <body style="margin-left:10%; margin-right:10%; padding:0">
+            <h2 align="left">Stalls</h2>
+            
+            {% for stalls in stall_list %}
+            <hr size="1px" align="center" color="#c4c4c4"><br>
+            <table width="70%" align="center">
+            <tr>
+                <td width="400px" align="center"><img src="/static/images/{{stalls["image"]}}" width="250px" align="center"></td><td width="750px" padding="10%" align="left"><h1 align="left">{{stalls["name"]}}</h1><br><h4>{{stalls["description"]}}</h4><br><a href="/{{stalls["link"]}}"><h3>Menu</h3></a></td></tr></table><br>
+            {% endfor %}
+    </body>
+    <footer>
+            <br>
+            Copyright (c) 2019 Just-A-SEC Inc. All rights reserved.<br>
+            View our privacy policy <a href="privacy.html">here</a>.
+    </footer>
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <header>
+    </header>
+    <body style="margin-left:10%; margin-right:10%; padding:0">
+        <p/>
+        {% include "header.html" %}
+        <h1>Menu</h1>
+        <table width="100%" align="center">
+            <tr><th>Name</th><th>Price</th></tr>
+            {% for product in product_list %}
+                <tr>
+                    <td><a href='/productdetails?code={{product["code"]}}'>{{product["name"]}}</a></td>
+                    <td>{{product["price"]}}</td> </tr>
+            {% endfor %}
+        </table>
+        {% include "footer.html" %}
+    </body>
+</html>

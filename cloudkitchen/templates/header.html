@@ -1,0 +1,40 @@
+<html>
+    <header>
+    <link rel="stylesheet" style="text/css" href="/static/styles/styles.css" crossorigin="anonymous"/>
+        <style>
+        body {
+        font-family: Open Sans;
+        font-style: normal;
+        font-size: 12px;
+        color: #000000;
+            }
+        a:link {
+        color: #000000;
+        text-decoration: none;
+            }
+
+        a:visited {
+        color: #000000;
+        text-decoration: none;
+            }
+
+        a:hover {
+        color: palevioletred;
+        text-decoration: none;
+            }
+        </style>
+    </header>
+    <body style="margin-left:10%; margin-right:10%; padding:0" align="center">
+        <a href='/'>Home</a> | <a href='/stalls'>Stalls</a> | <a href='/aboutus'>About Us</a> | {% if session["user"] is defined %}
+        Welcome, {{ session["user"]["first_name"] }}. |
+        <a href='/cart'>Food Tray</a> |
+        <a href='/orderhistory'>Purchase History</a> |
+        <a href='/changepassword'>Change Password</a> |
+        <a href='/logout'>Logout</a>
+        {% else %}
+        <a href='/login'>Login</a>
+        {% endif %}
+        <p/>
+        <br>
+    </body>
+</html>

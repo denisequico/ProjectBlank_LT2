@@ -1,0 +1,3 @@
+{"_id":{"$oid":"5de2596fd9aacdc98f09c081"},"code":700,"name":"Truffle Grilled Cheese","description":"Classic truffle cheese focaccia bread sandwich, grilled to perfection.","image":"mana cheese.png","stallid":"Mana","price":99.0}
+{"_id":{"$oid":"5de2596fd9aacdc98f09c082"},"code":800,"name":"Chicken Parmesan","description":"Deliciously shredded chicken in our parmesan and tomato sauce, sandwiched in our signature grilled focaccia bread.","image":"mana chicken.png","stallid":"Mana","price":110.0}
+{"_id":{"$oid":"5de2596fd9aacdc98f09c083"},"code":900,"name":"Sailor's Salmon","description":"Freshly cut cubes of salmon with slices of cucumber sandwiched in our signature grilled focaccia bread.","image":"mana salmon.png","stallid":"Mana","price":120.0}

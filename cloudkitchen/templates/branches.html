@@ -1,0 +1,15 @@
+<html>
+    <header>
+    </header>
+    <body style="margin-left:10%; margin-right:10%; padding:0">
+        <p/>
+        {% include "header.html" %}
+        <h1>Branches</h1>
+            <ul>
+            {% for branch in branch_list %}
+                <li>{{branch["name"]}}</li>
+            {% endfor %}
+            </ul>
+        {% include "footer.html" %}
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <header>
+    </header>
+    <body style="margin-left:10%; margin-right:10%; padding:0">
+        <p/>
+        {% include "header.html" %}
+        <h1>Product Details</h1>
+        <table align="center">
+            <tr height="300px">
+                    <td padding="10%" align="center" width="400px"><img src="/static/images/{{product["image"]}}" align="center" width="200px"></td>
+                    <td width="70%"><h3>{{product["name"]}}</h3>
+                    <h4>{{product["description"]}}</h4>
+                    <h4>Php {{product["price"]}}</h4>
+            {% if session["user"] is defined %}
+                Quantity
+                <br>
+                  <form action="/addtocart" method="POST">
+                  <input type="hidden" name="code" value="{{ code }}">
+                  <input type="number" name="quantity" min="1" step="1" pattern="\d*" value="1">
+                  <input type="submit" value="Add to Cart">
+                  </form>
+                </td>
+            {% endif %}
+            </tr>
+        </table>
+        <a href="/stalls">Back to Stalls</a>
+        {% include "footer.html" %}
+    </body>
+</html>

@@ -1,0 +1,75 @@
+//database
+
+db.products.insertMany([
+    {"code":NumberInt(100),"name":"Cheesy Jalapeno","description":"Description","image":"dj cheesy jalapeno.png","stallid":201901,"price":90.0},
+    {"code":NumberInt(200),"name":"Gravy","description":"Description","image":"dj gravy.png","stallid":201901,"price":90.0},
+    {"code":NumberInt(300),"name":"Honey Garlic","description":"Description","image":"dj honey garlic.png","stallid":201901,"price":90.0},
+
+    {"code":NumberInt(400),"name":"Dallas","description":"Description","image":"downtown dallas.png","stallid":201902,"price":90.0},
+    {"code":NumberInt(500),"name":"LA","description":"Description","image":"downtown LA.png","stallid":201902,"price":90.0},
+    {"code":NumberInt(600),"name":"Miami","description":"Description","image":"downtown miami.png","stallid":201902,"price":90.0},
+    {"code":NumberInt(700),"name":"Truffle Grilled Cheese","description":"Description","image":"mana cheese.png","stallid":201903,"price":99.0},
+    {"code":NumberInt(800),"name":"Chicken Parmesan","description":"Description","image":"mana chicken.png","stallid":201903,"price":110.0},
+    {"code":NumberInt(900),"name":"Sailor's Salmon","description":"Description","image":"mana salmon.png","stallid":201903,"price":120.0}
+]);
+
+db.stalls.insertMany([
+{"code":NumberInt(100),"stallid":201901,"name":"DJ Chick","image":"djchick.png","description":"Get crispy fried chicken breasts cut into bite-sized pieces topped with our own unique signature sauces with a hearty serving of rice.","link":"djchick"},
+{"code":NumberInt(200),"stallid":201902,"name":"Downtown Fillet","image":"downtownfillet.png","description":"Get a taste of our scrumptious fried chicken fillet burgers, with an array of different flavors and sauces that you're bound to love.","link":"downtownfillet"},
+{"code":NumberInt(300),"stallid":201903,"name":"Mana","image":"mana.png","description":"Get the perfect study snack with our signature, perfectly grilled focaccia bread sandwiches, with delicious fillings that are guaranteed to satisfy any craving","link":"mana"}
+]);
+
+use products //creates products database (products_db)
+
+db.djchick.insertMany([
+{"code":NumberInt(100),"name":"ILYSB","description":"Fried chicken bites topped with scrumptious Cheesy Jalapeno sauce.","image":"dj cheesy jalapeno.png","stallid":"DJ Chick","price":105.0},
+{"code":NumberInt(200),"name":"God's Plan","description":"Fried chicken bites topped with savory gravy sauce.","image":"dj gravy.png","stallid":"DJ Chick","price":105.0},
+{"code":NumberInt(300),"name":"Uptown Funk","description":"Fried chicken bites topped with tasty Honey Garlic sauce.","image":"dj honey garlic.png","stallid":"DJ Chick","price":105.0}
+]);
+
+db.downtownfillet.insertMany([
+{"code":NumberInt(400),"name":"Dallas","description":"Fried chicken fillet with our sweet and smokey sauce wrapped up into a burger.","image":"downtown dallas.png","stallid":"Downtown Fillet","price":85.0},
+{"code":NumberInt(500),"name":"LA","description":"Extra crispy fried chicken fillet with a unique tangy edge wrapped up into a burger.","image":"downtown LA.png","stallid":"Downtown Fillet","price":85.0},
+{"code":NumberInt(600),"name":"Miami","description":"Fried chicken fillet with our 'simply spicy' sauce wrapped up into a burger.","image":"downtown miami.png","stallid":"Downtown Fillet","price":85.0}
+]);
+
+db.mana.insertMany([
+{"code":NumberInt(700),"name":"Truffle Grilled Cheese","description":"Classic truffle cheese focaccia bread sandwich, grilled to perfection.","image":"mana cheese.png","stallid":"Mana","price":99.0},
+{"code":NumberInt(800),"name":"Chicken Parmesan","description":"Deliciously shredded chicken in our parmesan and tomato sauce, sandwiched in our signature grilled focaccia bread.","image":"mana chicken.png","stallid":"Mana","price":110.0},
+{"code":NumberInt(900),"name":"Sailor's Salmon","description":"Freshly cut cubes of salmon with slices of cucumber sandwiched in our signature grilled focaccia bread.","image":"mana salmon.png","stallid":"Mana","price":120.0}
+]);
+
+--
+
+				DATABASE WITH STALL PARAMETER
+db.djchick.insertMany([
+{"code":NumberInt(100),"name":"ILYSB","description":"Fried chicken bites topped with scrumptious Cheesy Jalapeno sauce.","image":"dj cheesy jalapeno.png","stallid":201901,"price":105.0,”stall”:”DJChick”},
+{"code":NumberInt(200),"name":"God's Plan","description":"Fried chicken bites topped with savory gravy sauce.","image":"dj gravy.png","stallid":201901,"price":105.0,”stall”:”DJChick”},
+{"code":NumberInt(300),"name":"Uptown Funk","description":"Fried chicken bites topped with tasty Honey Garlic sauce.","image":"dj honey garlic.png","stallid":201901,"price":105.0,”stallname”:”DJChick”}
+]);
+
+db.downtownfillet.insertMany([
+{"code":NumberInt(400),"name":"Dallas","description":"Fried chicken fillet with our sweet and smokey sauce wrapped up into a burger.","image":"downtown dallas.png","stallid":201902,"price":85.0, ”stall”:”Downtown Fillet”},
+{"code":NumberInt(500),"name":"LA","description":"Extra crispy fried chicken fillet with a unique tangy edge wrapped up into a burger.","image":"downtown LA.png","stallid":201902,"price":85.0,”stall”:”Downtown Fillet”},
+{"code":NumberInt(600),"name":"Miami","description":"Fried chicken fillet with our 'simply spicy' sauce wrapped up into a burger.","image":"downtown miami.png","stallid":201902,"price":85.0,”stall”:”Downtown Fillet”}
+]);
+
+db.mana.insertMany([
+{"code":NumberInt(700),"name":"Truffle Grilled Cheese","description":"Classic truffle cheese focaccia bread sandwich, grilled to perfection.","image":"mana cheese.png","stallid":201903,"price":99.0,”stall”:”Mana”},
+{"code":NumberInt(800),"name":"Chicken Parmesan","description":"Deliciously shredded chicken in our parmesan and tomato sauce, sandwiched in our signature grilled focaccia bread.","image":"mana chicken.png","stallid":201903,"price":110.0,”stall”:”Mana”},
+{"code":NumberInt(900),"name":"Sailor's Salmon","description":"Freshly cut cubes of salmon with slices of cucumber sandwiched in our signature grilled focaccia bread.","image":"mana salmon.png","stallid":201903,"price":120.0,”stall”:”Mana”}
+
+--
+
+db.products.insertMany([
+{"code":NumberInt(100),"name":"ILYSB","description":"Fried chicken bites topped with scrumptious Cheesy Jalapeno sauce.","image":"dj cheesy jalapeno.png","stallid":"DJ Chick","price":105.0},
+{"code":NumberInt(200),"name":"God's Plan","description":"Fried chicken bites topped with savory gravy sauce.","image":"dj gravy.png","stallid":"DJ Chick","price":105.0},
+{"code":NumberInt(300),"name":"Uptown Funk","description":"Fried chicken bites topped with tasty Honey Garlic sauce.","image":"dj honey garlic.png","stallid":"DJ Chick","price":105.0},
+{"code":NumberInt(400),"name":"Dallas","description":"Fried chicken fillet with our sweet and smokey sauce wrapped up into a burger.","image":"downtown dallas.png","stallid":"Downtown Fillet","price":85.0},
+{"code":NumberInt(500),"name":"LA","description":"Extra crispy fried chicken fillet with a unique tangy edge wrapped up into a burger.","image":"downtown LA.png","stallid":"Downtown Fillet","price":85.0},
+{"code":NumberInt(600),"name":"Miami","description":"Fried chicken fillet with our 'simply spicy' sauce wrapped up into a burger.","image":"downtown miami.png","stallid":"Downtown Fillet","price":85.0},
+{"code":NumberInt(700),"name":"Truffle Grilled Cheese","description":"Classic truffle cheese focaccia bread sandwich, grilled to perfection.","image":"mana cheese.png","stallid":"Mana","price":99.0},
+{"code":NumberInt(800),"name":"Chicken Parmesan","description":"Deliciously shredded chicken in our parmesan and tomato sauce, sandwiched in our signature grilled focaccia bread.","image":"mana chicken.png","stallid":"Mana","price":110.0},
+{"code":NumberInt(900),"name":"Sailor's Salmon","description":"Freshly cut cubes of salmon with slices of cucumber sandwiched in our signature grilled focaccia bread.","image":"mana salmon.png","stallid":"Mana","price":120.0}
+
+]);

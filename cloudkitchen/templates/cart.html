@@ -1,0 +1,48 @@
+{% include "header.html" %}
+  
+<body style="margin-left:10%; margin-right:10%; padding:0">
+<h1>Food Tray</h1>
+
+    {% if session["cart"] is defined %}
+    <table  width="70%" align="center">
+        <b><tr align="left"><th></th><th>Name</th><th>Quantity</th><th>Subtotal</th></tr></b>
+    {% for item in session["cart"].values() %}
+        <tr height="50px"><td><h3>{{ item["stallid"] }}</h3></td>
+            <td><h4>{{ item["name"] }}</h4></td>
+            <td><h4>{{ item["qty"] }}</h4></td>
+            <td><b><h4>{{ item["subtotal"] }}</h4></b></tr>
+    {% endfor %}
+      <tr><td></td><td colspan=2><b><h4>Total</h4></b></td><td><b><h4>{{ session["cart"].values()|sum(attribute="subtotal") }}</h4></b></td></tr>
+    </table>
+        
+    <select name="Locations">
+    <option value="Xavier Hall">Xavier Hall</option>
+    <option value="Kostka Hall">Kostka Hall</option>
+    <option value="Berchmans Hall">Berchmans Hall</option>
+    <option value="Gonzaga Hall">Gonzaga Hall</option>
+    <option value="MVP Building">MVP Building</option>
+    <option value="Faber Hall">Faber Hall</option>
+    <option value="New Rizal Library">New Rizal Library</option>
+    <option value="Leong Hall">Leong Hall</option>
+    <option value="Horacio de la Costa Hall">Horacio de la Costa Hall</option>
+    <option value="Faura Hall">Faura Hall</option>
+    <option value="PIPAC Building">PIPAC Building</option>
+    <option value="Schmitt Hall">Schmitt Hall</option>
+    <option value="SEC A Foyer">SEC A Foyer</option>
+    <option value="SEC B Foyer">SEC B Foyer</option>
+    <option value="SEC C Foyer">SEC C Foyer</option>
+    <option value="CTC Building">CTC Building</option>
+    <option value="SOM Building">SOM Building</option>
+    <option value="Matteo Ricci Hall">Matteo Ricci Hall</option>
+        </select><br>
+    <br>
+    
+    <a href=/clearcart><h4>Clear Cart</h4></a>
+    or
+    <a href=/checkout><h3>Checkout</h3></a><br>
+    {% else %}
+    <div>Your cart is empty</div>
+    {% endif %}
+
+</body>
+{% include "footer.html" %}

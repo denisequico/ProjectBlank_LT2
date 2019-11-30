@@ -1,0 +1,9 @@
+{"_id":{"$oid":"5ddb8b14fd525d0ead9facc5"},"first_name":"Rodrigo","last_name":"Duterte","city":"Manila","points":1000.0}
+{"_id":{"$oid":"5ddb8b20fd525d0ead9facc6"},"username":"chums@example.com","password":"n3wp@ssw0rd","first_name":"Matthew","last_name":"Uy"}
+{"_id":{"$oid":"5ddb8b20fd525d0ead9facc7"},"username":"joben@example.com","password":"gh","first_name":"Joben","last_name":"Ilagan"}
+{"_id":{"$oid":"5ddb8b34fd525d0ead9facc8"},"username":"bong@example.com","password":"Ch@ng3m3!","first_name":"Bong","last_name":"Olpoc"}
+{"_id":{"$oid":"5ddb8b34fd525d0ead9facc9"},"username":"joaqs@example.com","password":"Ch@ng3m3!","first_name":"Joaqs","last_name":"Gonzales"}
+{"_id":{"$oid":"5ddb8b3cfd525d0ead9facca"},"username":"gihoe@example.com","password":"Ch@ng3m3!","first_name":"Gio","last_name":"Hernandez"}
+{"_id":{"$oid":"5ddb8b3cfd525d0ead9faccb"},"username":"vic@example.com","password":"Ch@ng3m3!","first_name":"Vic","last_name":"Reventar"}
+{"_id":{"$oid":"5ddb8b4cfd525d0ead9faccc"},"username":"joe@example.com","password":"Ch@ng3m3!","first_name":"Joe","last_name":"Ilagan"}
+{"_id":{"$oid":"5ddb8b4cfd525d0ead9faccd"},"username":"eb@example.com","password":"Ch@ng3m3!","first_name":"EB","last_name":"Ilagan"}

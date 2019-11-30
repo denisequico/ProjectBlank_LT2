@@ -1,0 +1,24 @@
+{% include "header.html" %}
+    <style>
+        td {
+            width:100px;
+            text-align: left;
+        }
+    </style>
+  <h1>Order History</h1>
+    <body style="margin-left:50%; margin-right:50%; padding:0" align="center">
+    {% for order in order_list %}
+      <table width ="500px" align="center">
+    {% set order_list = order["details"] %}
+          <hr align="center" size="1px" width="500px" color="palevioletred">
+          <tr><td><b>Order Date</b></td><td> {{order["orderdate"]}} </td><td></td></tr>
+          <tr><td><b>Item</b></td><td><b>Quantity</b></td> <td><b>Subtotal</b></td></tr>
+      {% for item in order_list %}
+        <tr><td>{{item["name"]}} </td><td> {{item["qty"]}}</td> <td> {{item["subtotal"]}}</td></tr>
+      {% endfor %}
+      </table>
+    {% endfor %}
+    </body>
+
+<br>
+{% include "footer.html" %}

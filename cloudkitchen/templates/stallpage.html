@@ -1,0 +1,30 @@
+<html>
+    <header>
+    <style>
+        table {
+            table-layout: fixed ;
+            width: 100% ;
+        }
+        td {
+            width: 25% ;
+        }
+        </style>
+    </header>
+    <body style="margin-left:10%; margin-right:10%; padding:0">
+        <p/>
+        {% include "header.html" %}
+        <h1> Menu </h1>
+        {% for product in product_list %}
+        <hr size="1px" align="center" color="#c4c4c4">
+        <table align="center" width="50%">
+                <tr height="250px">
+                    <td align="center" width="400px"><img src="/static/images/{{product["image"]}}" width="200px"></td>
+                    <td width="70%"><h3><a href='/productdetails?code={{product["code"]}}'>{{product["name"]}}</a></h3>
+                    <h4>{{product["description"]}}</h4><br><h4>Php {{product["price"]}}</h4>
+                    </td>
+                </tr>
+        </table>
+        {% endfor %}
+        {% include "footer.html" %}
+    </body>
+</html>

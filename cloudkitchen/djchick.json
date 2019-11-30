@@ -1,0 +1,3 @@
+{"_id":{"$oid":"5de2467a8d389342ff930bf0"},"code":100,"name":"ILYSB","description":"Fried chicken bites topped with scrumptious Cheesy Jalapeno sauce.","image":"dj cheesy jalapeno.png","stallid":"DJ Chick","price":105.0}
+{"_id":{"$oid":"5de2467a8d389342ff930bf1"},"code":200,"name":"God's Plan","description":"Fried chicken bites topped with savory gravy sauce.","image":"dj gravy.png","stallid":"DJ Chick","price":105.0}
+{"_id":{"$oid":"5de2467a8d389342ff930bf2"},"code":300,"name":"Uptown Funk","description":"Fried chicken bites topped with tasty Honey Garlic sauce.","image":"dj honey garlic.png","stallid":"DJ Chick","price":105.0}
